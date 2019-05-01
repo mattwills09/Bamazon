@@ -23,10 +23,13 @@ function showItems() {
       if (err) throw err;
     //   var saleItems = results;
     // console.log(results);
-    console.log("===========================\n" + results.length + " Items Available!\n");
+    console.log("==================================================");
+    console.log("==================================================\n" + results.length + " Items Available!\n");
         for (var i = 0; i < results.length; i++) {
             console.log(i+1 + ".)" + " Item: " + results[i].product_name + "| Department: " + results[i].department_name + "| Price: " + results[i].price + "| Inventory: " + results[i].stock_quantity);
         }
+        console.log("\n==================================================");
+        console.log("==================================================");
         inquirer.prompt([
             {
                 name: "choice",
@@ -69,7 +72,10 @@ function showItems() {
                     ],
                     function(err) {
                         if (err) throw err;
-                        console.log("Item Purchased Successfully!\n");
+                        console.log("Item Purchased Successfully!");
+                        console.log("\n==================================================\n");
+                        // showItems();
+
                         inquirer.prompt([
                             {
                                 name: "shopMore",
@@ -83,7 +89,7 @@ function showItems() {
                             else {
                                 endShop();
                             }
-                        })
+                        });
                     }
                     );
                 }

@@ -12,24 +12,26 @@ CREATE TABLE products(
 );
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Hockey Stick", "Sports", 20, 5);
+VALUES ("Hockey Stick", "Sports", 20, 15);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Throwback Jersey", "Clothing", 80, 6);
+VALUES ("Throwback Jersey", "Clothing", 80, 26);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Dirty Socks", "Clothing", 12, 45);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Used Dog Toy", "Pets", 10, 15);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Dog Crate", "Pets", 90, 3);
+VALUES ("Dog Crate", "Pets", 90, 23);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Fitted Hat", "Clothing", 30, 18);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Playstation 3 Games", "Electronics", 30, 20);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Old Computer Charger", "Electronics", 20, 6);
+VALUES ("Old Computer Charger", "Electronics", 20, 42);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Basketball", "Sports", 16, 8);
+VALUES ("Basketballs", "Sports", 16, 38);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("iPhone3", "Electronics", 50, 2);
+VALUES ("iPhone3", "Electronics", 50, 12);
+
+
 
 SELECT * FROM bamazon_db.products;
