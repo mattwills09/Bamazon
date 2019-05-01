@@ -120,7 +120,7 @@ function addInventory() {
         inquirer.prompt([
         {
             name: "item",
-            type: "list",
+            type: "rawlist",
             choices: function() {
                 var itemsArray = [];
                 for (var i = 0; i < results.length; i++) {
@@ -137,18 +137,19 @@ function addInventory() {
         }
     ]).then(function(answer) {
         var chosenProduct = "";
-        var newTotal = results.stock_quantity;
         for (var i = 0; i < results.length; i++) {
             if (results[i].product_name === answer.item) {
                 chosenProduct = results[i];
+                var addProduct = results[i].stock_quantity;
             }
         }
-
+    
+        var newTotal = addProduct + answer.addNum;
         connection.query(
             "UPDATE products SET ? WHERE ?",
         [
           {
-            stock_quantity: answer.addNum + newTotal,
+            stock_quantity: newTotal,
           },
           {
             product_name: chosenProduct.name
@@ -167,20 +168,38 @@ function addInventory() {
 
 function addProduct() {
     console.log("\n==========================================================");
-    console.log("\n----- *MANAGER VIEW*  -----  ADD NEW PRODUCT: -----");
+    console.log("\n  ----- *MANAGER VIEW*  -----  ADD NEW PRODUCT: -----");
     console.log("----------------------------------------------------------\n");
 
     inquirer.prompt([
         {
-            name: "newItem",
+            name: "newProduct",
             type: "input",
             message: "\nWhat product would you like to add?",
-        }
+        },
+        {
+            name: "newDept",
+            type: "input",
+            message: "\nWhat department to add product to?",
+        },
+        {
+            name: "newPrice",
+            type: "input",
+            message: "\nWhat is the product(s) price?",
+        },
+        {
+            name: "newStock",
+            type: "input",
+            message: "\nHow many products are in the inventory?",
+        },
     ]).then(function(answer) {
         connection.query(
             "INSERT INTO products SET ?",
           {
-            product_name: chosenProduct.name
+            product_name: answer.newProduct,
+            department_name: answer.newDept,
+            price: answer.newPrice,
+            stock_quantity: answer.newStock
           },
         function(err) {
             if (err) throw err;
