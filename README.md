@@ -1,7 +1,7 @@
 # 'Bamazon' Online Node JS Store Application
 ___
 
-The main goal of this project was to creating a storefront type application, loosely based off of Amazon, that would be run from the terminal using Node JS, and linked to a MySQL database.  When the user opens the app they are able to see the current inventory of the database, and then can place an order for a specific item.  From there, the stock quantity of the item will also be deducted from the database, and if no more items are available, the user will be notified.  Screenshots of the SQL database is found below:
+The main goal for this project was to create a storefront type application, loosely based off of Amazon, that would be run from the terminal using Node JS and linked to a MySQL database.  When the user starts the application they are able to see the current inventory of the products in the database, and can then place an order for a specific item.  From there, the stock quantity of the item will be deducted from the database, and if no more items are available, the user will be notified of that.  Screenshots of the SQL database is found below:
 ___
 ![SQL Products Database](images/bamazonSQL-dB.jpg)
 ___
