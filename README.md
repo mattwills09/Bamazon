@@ -1,7 +1,7 @@
 # 'Bamazon' Node Based Terminal Online Store Application
 ___
 
-The primary goal for this entirely terminal ran application was to create an online storefront type application, loosely based off of Amazon, that would be run from the terminal using Node JS and linked to a MySQL database using MySQL Workbench.  When the user starts the application they are able to see the current inventory of the products in the database, and then can place an order for a specific item.  From there, the stock quantity of the item will be deducted from the database, and if no more items are available, the user will be notified of that.  Screenshots of the SQL database is found below:
+The primary purpose for this entirely terminal ran application was to create an online storefront type application, that is loosely based off of the conglomerate, Amazon, that would be able to be ran from the terminal using Node JS, and linked to a MySQL database using MySQL Workbench.  When the user starts the application they are able to see the current inventory of the products in the database, and then can place an order for a specific item.  From there, the stock quantity of the item will be deducted from the database, and if no more items are available, the user will be notified of that.  Screenshots of the SQL database is found below:
 ___
 ![SQL Products Database](images/bamazonSQL-dB.jpg)
 ___
