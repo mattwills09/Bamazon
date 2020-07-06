@@ -8,7 +8,7 @@ ___
 
 Screenshots for the JavaScript code and NodeJS terminal store are found below as well, and after past completed activities, this was the easier part of the application.  The majority of bugs encountered were found when making sure that the correct callback functions were stored inside the correct parent functions so that every function would run smoothly.  I had conferred with two colleagues briefly and was able to get everything in order.
 ___
-![1-bamazonCustomer-showItems2](images/1-bamazonCustomer-showItems.jpg)
+![1-bamazonCustomer-showItems](images/1-bamazonCustomer-showItems2.jpg)
 ___
 ![1-bamazonCustomer-showItems(2)](images/1-bamazonCustomer-showItems(2).jpg)
 ___
